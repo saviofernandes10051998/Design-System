@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Process step component">
+  <meta name="author" content="Savio Fernandes">
+  <title>Process step · S.Fernandes Design System</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/ds.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+<nav class="navbar navbar-expand-md sticky-top sf-nav" aria-label="Main">
+  <div class="container-xl">
+    <a class="navbar-brand" href="../index.html"><img src="../assets/logo/sf-lockup-black.svg" alt="S.Fernandes design system home"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sfnav" aria-controls="sfnav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="sfnav">
+      <ul class="navbar-nav ms-auto gap-md-2"><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dd-foundations" role="button" data-bs-toggle="dropdown" aria-expanded="false">Foundations</a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dd-foundations"><li><a class="dropdown-item" href="../foundations/colors.html">Color</a></li><li><a class="dropdown-item" href="../foundations/typography.html">Typography</a></li><li><a class="dropdown-item" href="../foundations/logo.html">Logo</a></li></ul>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="dd-components" role="button" data-bs-toggle="dropdown" aria-expanded="false">Components</a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dd-components"><li><a class="dropdown-item" href="../components/button.html">Button</a></li><li><a class="dropdown-item" href="../components/card.html">Resource card</a></li><li><a class="dropdown-item" href="../components/tag.html">Pillar tag</a></li><li><a class="dropdown-item active" href="../components/step.html" aria-current="page">Process step</a></li></ul>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dd-page-pattern" role="button" data-bs-toggle="dropdown" aria-expanded="false">Page pattern</a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dd-page-pattern"><li><a class="dropdown-item" href="../patterns/case-study.html">Case study: VIA Toolkit</a></li></ul>
+        </li></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<div class="container-xl">
+  <div class="row">
+    <div class="col-lg-3 d-none d-lg-block"><nav class="sf-sidebar" aria-label="Design system sections"><h2>Foundations</h2><a href="../foundations/colors.html">Color</a><a href="../foundations/typography.html">Typography</a><a href="../foundations/logo.html">Logo</a><h2>Components</h2><a href="../components/button.html">Button</a><a href="../components/card.html">Resource card</a><a href="../components/tag.html">Pillar tag</a><a href="../components/step.html" aria-current="page">Process step</a><h2>Page pattern</h2><a href="../patterns/case-study.html">Case study: VIA Toolkit</a></nav></div>
+    <main id="main" class="col-lg-9">
+      <div class="sf-doc-header">
+        <span class="sf-eyebrow">Components · 04</span>
+        <h1>Process step</h1>
+        <p class="sf-lead sf-measure">A numbered timeline that shows how the work happened, step by step.</p>
+      </div>
+      <section class="sf-doc-block" aria-labelledby="s-ex"><h2 id="s-ex" class="mb-4">Example</h2><div class="sf-demo"><ol class="sf-steps">
+  <li class="sf-step"><h3 class="sf-step__title">Audit</h3><p class="sf-step__text">Reviewed the live site page by page.</p></li>
+  <li class="sf-step"><h3 class="sf-step__title">Analyze</h3><p class="sf-step__text">Studied visitor data in Google Analytics.</p></li>
+  <li class="sf-step"><h3 class="sf-step__title">Present</h3><p class="sf-step__text">Shared findings in plain language.</p></li>
+  <li class="sf-step"><h3 class="sf-step__title">Propose</h3><p class="sf-step__text">Designed a faster way to find reflections.</p></li>
+</ol></div></section><section class="sf-doc-block" aria-labelledby="s-css"><h2 id="s-css" class="mb-4">CSS specifications</h2><div class="table-wrap"><table class="sf-spec"><thead><tr><th>Property</th><th>Value / token</th><th>Notes</th></tr></thead><tbody><tr><td><b>Layout</b></td><td><code>grid, 4 columns ≥ 992px</code></td><td>Stacks to 1 column on phones</td></tr><tr><td><b>Number</b></td><td><code>Bodoni Moda Italic, 40px, --sf-accent-text</code></td><td>Generated by a CSS counter</td></tr><tr><td><b>Rule</b></td><td><code>1px --sf-ink, 52px from top</code></td><td></td></tr><tr><td><b>Title</b></td><td><code>Inter 600, 20px</code></td><td></td></tr><tr><td><b>Text</b></td><td><code>Inter 400, 16px, --sf-text-secondary</code></td><td></td></tr><tr><td><b>Gap</b></td><td><code>24px</code></td><td>--sf-space-4</td></tr></tbody></table></div><div class="mt-4"><pre class="sf-code"><code>.sf-steps { list-style: none; display: grid; gap: 24px; counter-reset: sfstep; }
+@media (min-width: 992px) { .sf-steps { grid-template-columns: repeat(4, 1fr); } }
+.sf-step { counter-increment: sfstep; position: relative; padding-top: 72px; }
+.sf-step::before {                       /* 01, 02, 03 … */
+  content: counter(sfstep, decimal-leading-zero);
+  font: italic 2.5rem/1 var(--sf-font-display);
+  color: var(--sf-accent-text);
+  position: absolute; top: 0;
+}
+.sf-step::after { content: &quot;&quot;; position: absolute; top: 52px; left: 0; right: 0;
+                  border-top: 1px solid var(--sf-ink); }</code></pre></div><h3 class="h5 mt-4">HTML</h3><pre class="sf-code"><code>&lt;ol class=&quot;sf-steps&quot;&gt;
+  &lt;li class=&quot;sf-step&quot;&gt;
+    &lt;h3 class=&quot;sf-step__title&quot;&gt;Audit&lt;/h3&gt;
+    &lt;p class=&quot;sf-step__text&quot;&gt;Reviewed the live site page by page.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;!-- repeat .sf-step --&gt;
+&lt;/ol&gt;</code></pre></section><section class="sf-doc-block"><div class="sf-a11y"><h2 class="h5 fw-semibold" style="font-family:var(--sf-font-text)">Accessibility guidelines</h2><ul><li>Steps use an ordered list (<code>&lt;ol&gt;</code>), so screen readers announce “list, 4 items” and the order.</li><li>The big numbers are added by CSS for decoration. The order comes from the list itself.</li><li>Each step has a real heading, so the process can be scanned with a screen reader’s heading list.</li></ul></div></section>
+    </main>
+  </div>
+</div>
+<footer class="sf-footer">
+  <div class="container-xl d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <img src="../assets/logo/sf-wordmark-black.svg" alt="S.Fernandes">
+    <span>Simple Design System v1.0 · Savio Fernandes · HCI 472, DePaul University · Fall 2026 · Built with Bootstrap 5.3</span>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Pillar tag filter toggles (Pillar tag component + case study demo)
+  document.querySelectorAll('button.sf-tag[aria-pressed]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+    });
+  });
+</script>
+</body>
+</html>
